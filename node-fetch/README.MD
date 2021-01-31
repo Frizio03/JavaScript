@@ -37,3 +37,14 @@ NB: il comando start deve essere impostato dal creatore nel file pakage.json ins
 ```sh
 "start": "node nomeMainFile.js"
 ```
+
+*I json: JavaScript Object Notation*
+>Sono file che contengono stringhe o semplici stringhe che vengono trasmesse online.
+>A seguito di opportune operazioni (PARSING) da parte di un programma possono essere convertiti in struture dati chiave-valore con le quali operare e da cui estrarre dati.
+```sh
+	//Parsing di una stringa e conversione in json
+	.then(res => res.json())
+```
+
+*I servizi di fake-API*
+Tali servizi trasmettono dei dati sotto forma di json usufruibili da un programma (dopo averli richiesti tramire node-fetch)
