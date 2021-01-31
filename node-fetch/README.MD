@@ -55,3 +55,4 @@ NB: il comando start deve essere impostato dal creatore nel file pakage.json ins
 
 *I servizi di fake-API*
 >Tali servizi trasmettono dei dati sotto forma di json usufruibili da un programma (dopo averli richiesti tramire node-fetch)
+>>>>>>> cc676a165900246e77475d285efbd20570701e8c
