@@ -1,11 +1,11 @@
 # NodeJS
 
 Contenuto repository:
-	* Come avviare un progetto di node js
-	* Conoscere il file "package.json"
-	* Librerie e cartella node_modules
-	* Libreria node-fetch https://www.npmjs.com/package/node-fetch
-	* Servizi di fake-api: https://jsonplaceholder.typicode.com/
+- Come avviare un progetto di node js
+- Conoscere il file "package.json"
+- Librerie e cartella node_modules
+- Libreria node-fetch https://www.npmjs.com/package/node-fetch
+- Servizi di fake-api: https://jsonplaceholder.typicode.com/
 
 *Avviare un progetto in nodeJS*
 1. Creare la cartella del prgetto senza spazi nel nome
