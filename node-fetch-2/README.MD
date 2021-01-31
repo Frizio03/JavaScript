@@ -1,5 +1,12 @@
-# NodeJS
+Effettuando richieste in fetch a questo endpoint https://jsonplaceholder.typicode.com/posts estrapolate i seguenti dati:
 
+<<<<<<< HEAD
+1. Stampare sul terminale l'id di tutti i post dell’utente con id 4
+2. Stampare sul terminale l'id di tutti i post con id dispari
+3. Stampare sul terminale l'id di tutti i post con un numero pari di parole nel titolo
+4. Stampare sul terminale l'id di tutti i post con un numero di lettere nel body che sia multiplo di 3
+5. Stampare sul terminale un’unica stringa che sia formata da tutti i body di tutti i post il cui titolo inizia per “s”
+=======
 Contenuto repository:
 - Come avviare un progetto di node js
 - Conoscere il file "package.json"
@@ -42,9 +49,10 @@ NB: il comando start deve essere impostato dal creatore nel file pakage.json ins
 >Sono file che contengono stringhe o semplici stringhe che vengono trasmesse online.
 >A seguito di opportune operazioni (PARSING) da parte di un programma possono essere convertiti in struture dati chiave-valore con le quali operare e da cui estrarre dati.
 ```sh
-	//Parsing di una stringa e conversione in json
-	.then(res => res.json())
+//Parsing di una stringa e conversione in json
+.then(res => res.json())
 ```
 
 *I servizi di fake-API*
-Tali servizi trasmettono dei dati sotto forma di json usufruibili da un programma (dopo averli richiesti tramire node-fetch)
+>Tali servizi trasmettono dei dati sotto forma di json usufruibili da un programma (dopo averli richiesti tramire node-fetch)
+>>>>>>> cc676a165900246e77475d285efbd20570701e8c
