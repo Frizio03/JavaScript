@@ -1,3 +1,5 @@
+Object.defineProperty(exports, '__esModule', { value: true });
+
 export function Es1(nes) {
     let soluzione = null
     richiediEsercizio(IP, nes)

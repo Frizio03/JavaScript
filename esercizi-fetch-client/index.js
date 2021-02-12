@@ -1,8 +1,6 @@
 "use strict"
-import {Es1} from './modulo.js'
-import {Es2} from './modulo.js'
 const fetch = require("node-fetch")
-const IP = "http://192.168.178.30:8080"
+const IP = "http://192.168.178.33:8080"
 const myName = "Fabrizio Tedeschi"
 
 //JSON di configurazione da passare al fetch
@@ -177,10 +175,10 @@ const Es10 = (nes) => {
 }
 
 //Codice principale
-sayHi("Mario")
-//accreditamento()
+
+accreditamento()
 /*Es1("1")
-Es2("2")
+Es2("2")*/
 Es3("3")
 Es4("4")
 Es5("5")
@@ -188,4 +186,4 @@ Es6("6")
 Es7("7")
 Es8("8")
 Es9("9")
-Es10("10")*/
+Es10("10")
