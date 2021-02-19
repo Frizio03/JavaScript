@@ -1,4 +1,4 @@
-#Esercizi
+# Esercizi
 
 Effettuando richieste in fetch a questo endpoint https://jsonplaceholder.typicode.com/posts estrapolate i seguenti dati:
 
