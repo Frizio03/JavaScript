@@ -1,6 +1,6 @@
 //Variabili e require
 const fetch = require("node-fetch")
-const IP = "http://192.168.178.47:8080"
+const IP = "http://192.168.178.33:8080"
 const myName = "Fabrizio Tedeschi"
 
 //JSON di configurazione da passare al fetch
