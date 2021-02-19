@@ -1,3 +1,5 @@
+# Esercizi
+
 Effettuando richieste in fetch a questo endpoint https://jsonplaceholder.typicode.com/posts estrapolate i seguenti dati:
 
 1. Stampare sul terminale l'id di tutti i post dell’utente con id 4
