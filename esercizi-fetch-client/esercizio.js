@@ -292,20 +292,150 @@ const Es19 = (nes) => {
         .catch(err => console.log(err))
 }
 
-const Es28 = (nes) => {
-    let dict = {};
-    let soluzione = 0
+const Es20 = (nes) => {
+    let soluzione = [];
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            data.forEach(e => soluzione.push(e.figli.length))
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es21 = (nes) => {
+    let soluzione = [];
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            soluzione = data.filter(e => e <= 5)
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es22 = (nes) => {
+    let soluzione = [];
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            soluzione = data.filter(e => e >= 3 && e <=6)
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es23 = (nes) => {
+    let soluzione = null
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            data2 = data.map(e => e.anni)
+            soluzione = data2.reduce((acc, e) => {
+                return acc + e
+            })
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es24 = (nes) => {
+    let soluzione = [];
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            for(let i=0; i<data.length; i++){
+                if(data[i].cognome[0] === "C")
+                    soluzione.push(data[i].nome)
+            }
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es25 = (nes) => {
+    let soluzione = null
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            console.log(data)
+            for(let i=0; i<data.length; i++){
+                for(let j=0; j<data[i].length; j++){
+                    if(data[i][j] === "a")
+                        soluzione +=1
+                }
+            }
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es26 = (nes) => {
+    let soluzione = [];
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            soluzione = data.map(e => e = e*-1)
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es27 = (nes) => {
+    let soluzione = [];
     f.richiediEsercizio(IP, nes)
         .then(data => {
             
             /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
             console.log(data)
+            data.negozio.forEach(e => {
+                soluzione.push(e)
+            })
+            data.magazzino.forEach(e => {
+                soluzione.push(e)
+            })
+            sol = soluzione.sort()
+            
+            for(i=0; i<sol.length; i++){
+                if(sol[i] === sol[i+1])
+                    sol.splice(i, 1)
+            }
+            
+            f.tentaEsercizio(IP, nes, soluzione.sort())
+        })
+        .catch(err => console.log(err))
+}
 
+const Es28 = (nes) => {
+    let dict = {};
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            //console.log(data)
+            
             data.negozio.forEach(e => {
                 dict[e] = 0
             })
             
-            for(let i=0; i < data.negozio.length; i++){
+            v = data.negozio.sort()
+            for(i=0; i<v.length; i++){
+                if(v[i] === v[i+1]){
+                    x = v[i]
+                    dict[x] += 1
+                    v.splice(i, 1)
+                }
+            }
+
+            //console.log(data.negozio)
+
+            for(let i=0; i < v.length; i++){
                 data.negozio.forEach(el => {
                     if(el === data.negozio[i]){
                         dict[el] += 1
@@ -318,7 +448,45 @@ const Es28 = (nes) => {
                 })
             }
 
-            console.log(dict)
+            //console.log(dict)
+            f.tentaEsercizio(IP, nes, dict)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es29 = (nes) => {
+    let soluzione = 1
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            for(i=1; i<data+1; i++){
+                soluzione *= i
+            }
+            f.tentaEsercizio(IP, nes, soluzione)
+        })
+        .catch(err => console.log(err))
+}
+
+const Es30 = (nes) => {
+    let soluzione = {x: 0, y: 0}
+    f.richiediEsercizio(IP, nes)
+        .then(data => {
+            
+            /*SCRIVERE QUI IL CODICE PER TROVARE LA SOLUZIONE*/
+            //console.log(data)
+            let rows = data.split("\n")
+            //console.log(rows)
+            for(y=0; y<rows.length; y++){
+                for(x=0; x<rows[y].length; x++){
+                    if(rows[y][x] === "X"){
+                        soluzione.x = x
+                        soluzione.y = y
+                        break
+                    }
+                }
+            }
+            console.log(soluzione)
             f.tentaEsercizio(IP, nes, soluzione)
         })
         .catch(err => console.log(err))
@@ -344,4 +512,14 @@ module.exports.Es16 = Es16
 module.exports.Es17 = Es17
 module.exports.Es18 = Es18
 module.exports.Es19 = Es19
+module.exports.Es20 = Es20
+module.exports.Es21 = Es21
+module.exports.Es22 = Es22
+module.exports.Es23 = Es23
+module.exports.Es24 = Es24
+module.exports.Es25 = Es25
+module.exports.Es26 = Es26
+module.exports.Es27 = Es27
 module.exports.Es28 = Es28
+module.exports.Es29 = Es29
+module.exports.Es30 = Es30
